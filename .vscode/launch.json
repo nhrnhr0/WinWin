@@ -5,6 +5,6 @@
         "cwd": "${workspaceRoot}/backend",
         "request": "launch",
         "type": "node-terminal",
-        "command": "npm run strapi develop",
+        "command": "yarn run strapi develop --watch-admin",
     }]
 }
