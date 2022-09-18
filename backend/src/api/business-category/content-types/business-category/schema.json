@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_categories",
+  "info": {
+    "singularName": "business-category",
+    "pluralName": "business-categories",
+    "displayName": "קטגוריות עסקים"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

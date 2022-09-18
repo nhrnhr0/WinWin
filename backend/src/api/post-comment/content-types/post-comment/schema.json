@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post_comments",
+  "info": {
+    "singularName": "post-comment",
+    "pluralName": "post-comments",
+    "displayName": "PostComment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "post_comments"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::my-usetr.my-usetr"
+    }
+  }
+}

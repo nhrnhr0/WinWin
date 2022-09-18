@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "my_usetrs",
+  "info": {
+    "singularName": "my-usetr",
+    "pluralName": "my-usetrs",
+    "displayName": "myUsetr"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "name2": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
