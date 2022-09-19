@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_attributes_contact_informations",
+  "info": {
+    "displayName": "פרטי יצירת קשר contact information",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedIn": {
+      "type": "string"
+    },
+    "instegram": {
+      "type": "string"
+    },
+    "easy": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "string"
+    }
+  }
+}

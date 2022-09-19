@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { Box } from '@strapi/design-system/Box';
 import styles from './mapfield.modules.css';
 import Autocomplete from "react-google-autocomplete";
-import {maps_api_key} from './../../../../../../config/server.js';
 const Wrapper = styled(Box)`
   .ck-editor__main {
     min-height: ${200 / 16}em;
@@ -15,15 +14,15 @@ const Wrapper = styled(Box)`
   }
 `;
 
-
+const maps_api_key = CUSTOM_VARIABLES.maps_api_key;
 const MapInputs = ({ onChange, name, value, disabled }) => {
 
   return (
     <Wrapper>
       <div className={styles.locationfieldswraper} >
         <Autocomplete
+            apiKey={maps_api_key}
             language="iw"
-            apiKey={CUSTOM_VARIABLES.maps_api_key}
             onPlaceSelected={(place) => {
                 let address = place.formatted_address;
                 let lat = place.geometry.location.lat();

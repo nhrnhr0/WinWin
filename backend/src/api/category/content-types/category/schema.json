@@ -4,7 +4,8 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "Category"
+    "displayName": "קטגוריה category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,7 +19,25 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::business.business",
-      "inversedBy": "categories"
+      "mappedBy": "categories"
+    },
+    "institutions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::institution.institution",
+      "mappedBy": "categories"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "children"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "parent"
     }
   }
 }

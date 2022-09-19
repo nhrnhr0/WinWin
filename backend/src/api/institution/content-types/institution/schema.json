@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "businesses",
+  "collectionName": "institutions",
   "info": {
-    "singularName": "business",
-    "pluralName": "businesses",
-    "displayName": "עסק business",
+    "singularName": "institution",
+    "pluralName": "institutions",
+    "displayName": "עמותה institution",
     "description": ""
   },
   "options": {
@@ -29,9 +29,6 @@
         }
       }
     },
-    "address": {
-      "type": "string"
-    },
     "description": {
       "type": "richtext"
     },
@@ -39,7 +36,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
-      "inversedBy": "businesses"
+      "inversedBy": "institutions"
     },
     "contact_info": {
       "type": "component",
@@ -68,16 +65,19 @@
         "audios"
       ]
     },
-    "opening_hours": {
+    "opening_housers": {
       "type": "component",
       "repeatable": false,
       "component": "attributes.opening-hours"
     },
-    "institutions": {
+    "businesses": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::institution.institution",
-      "mappedBy": "businesses"
+      "target": "api::business.business",
+      "inversedBy": "institutions"
+    },
+    "address": {
+      "type": "string"
     },
     "frequently_asked_questions": {
       "type": "component",

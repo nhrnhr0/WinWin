@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_attributes_qn_as",
+  "info": {
+    "displayName": "QnA",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

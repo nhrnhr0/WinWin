@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_attributes_opening_hours",
+  "info": {
+    "displayName": "Opening hours שעות פתיחה",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "sunday_open": {
+      "type": "time"
+    },
+    "sunday_close": {
+      "type": "time"
+    },
+    "monday_open": {
+      "type": "time"
+    },
+    "monday_close": {
+      "type": "time"
+    },
+    "tuesday_open": {
+      "type": "time"
+    },
+    "tuesday_close": {
+      "type": "time"
+    },
+    "wednesday_open": {
+      "type": "time"
+    },
+    "wednesday_close": {
+      "type": "time"
+    },
+    "thursday_open": {
+      "type": "time"
+    },
+    "thursday_close": {
+      "type": "time"
+    },
+    "friday_open": {
+      "type": "time"
+    },
+    "friday_close": {
+      "type": "time"
+    },
+    "saturday_open": {
+      "type": "time"
+    },
+    "saturday_close": {
+      "type": "time"
+    }
+  }
+}
