@@ -1,6 +1,13 @@
 {
     "version": "0.2.0",
     "configurations": [{
+        "name": "Launch svelte-kit dev",
+        "type": "node-terminal",
+        "cwd": "${workspaceFolder}/frontend2",
+        "command": "npm run dev",
+        "request": "launch",
+
+    }, {
         "name": "Launch strapi develop",
         "cwd": "${workspaceRoot}/backend",
         "request": "launch",

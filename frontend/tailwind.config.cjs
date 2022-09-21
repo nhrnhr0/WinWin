@@ -2,7 +2,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts}',
+				"./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}",],
 	theme: {
 		extend: {
 			fontFamily: {
@@ -11,6 +12,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+		require('flowbite/plugin'),
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/aspect-ratio')

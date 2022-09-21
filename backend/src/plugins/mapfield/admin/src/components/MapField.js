@@ -20,6 +20,7 @@ const MapInputs = ({ onChange, name, value, disabled }) => {
   return (
     <Wrapper>
       <div className={styles.locationfieldswraper} >
+        CUSTOM_VARIABLES.maps_api_key: {CUSTOM_VARIABLES.maps_api_key}
         <Autocomplete
             apiKey={maps_api_key}
             language="iw"
@@ -30,6 +31,10 @@ const MapInputs = ({ onChange, name, value, disabled }) => {
                 onChange({ target: { name: 'address', value: address.toString() } });
                 onChange({ target: { name: 'lat', value: lat.toString() } });
                 onChange({ target: { name: 'lng', value: lng.toString() } });
+            }}
+            options={{
+                types: [],
+                componentRestrictions: { country: "il" }
             }}
             placeholder='חיפוש כתובת'
         />

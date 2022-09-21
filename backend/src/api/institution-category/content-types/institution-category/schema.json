@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "institution_categories",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "קטגוריה category",
+    "singularName": "institution-category",
+    "pluralName": "institution-categories",
+    "displayName": "קטגוריות עמותה institution category",
     "description": ""
   },
   "options": {
@@ -15,28 +15,22 @@
     "name": {
       "type": "string"
     },
-    "businesses": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::business.business",
-      "mappedBy": "categories"
-    },
     "institutions": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::institution.institution",
-      "mappedBy": "categories"
+      "mappedBy": "institution_category"
     },
     "parent": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::category.category",
+      "target": "api::institution-category.institution-category",
       "inversedBy": "children"
     },
     "children": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::category.category",
+      "target": "api::institution-category.institution-category",
       "mappedBy": "parent"
     }
   }

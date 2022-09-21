@@ -32,12 +32,6 @@
     "description": {
       "type": "richtext"
     },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "inversedBy": "institutions"
-    },
     "contact_info": {
       "type": "component",
       "repeatable": false,
@@ -83,6 +77,12 @@
       "type": "component",
       "repeatable": true,
       "component": "attributes.qn-a"
+    },
+    "institution_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::institution-category.institution-category",
+      "inversedBy": "institutions"
     }
   }
 }

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "business_categories",
+  "info": {
+    "singularName": "business-category",
+    "pluralName": "business-categories",
+    "displayName": "קטגורית עסק business category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "businesses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::business.business",
+      "inversedBy": "business_categories"
+    },
+    "parents": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::business-category.business-category",
+      "inversedBy": "children"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::business-category.business-category",
+      "mappedBy": "parents"
+    }
+  }
+}
