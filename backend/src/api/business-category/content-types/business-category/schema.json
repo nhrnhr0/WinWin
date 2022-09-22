@@ -21,7 +21,7 @@
       "target": "api::business.business",
       "inversedBy": "business_categories"
     },
-    "parents": {
+    "parent": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::business-category.business-category",
@@ -31,7 +31,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::business-category.business-category",
-      "mappedBy": "parents"
+      "mappedBy": "parent"
     }
   }
 }
