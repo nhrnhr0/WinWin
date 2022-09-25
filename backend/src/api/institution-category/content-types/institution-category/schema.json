@@ -15,12 +15,6 @@
     "name": {
       "type": "string"
     },
-    "institutions": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::institution.institution",
-      "mappedBy": "institution_category"
-    },
     "parent": {
       "type": "relation",
       "relation": "manyToOne",
@@ -32,6 +26,12 @@
       "relation": "oneToMany",
       "target": "api::institution-category.institution-category",
       "mappedBy": "parent"
+    },
+    "institutions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::institution.institution",
+      "mappedBy": "institution_categories"
     }
   }
 }

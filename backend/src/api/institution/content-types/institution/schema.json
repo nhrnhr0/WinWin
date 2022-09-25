@@ -78,9 +78,9 @@
       "repeatable": true,
       "component": "attributes.qn-a"
     },
-    "institution_category": {
+    "institution_categories": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::institution-category.institution-category",
       "inversedBy": "institutions"
     }
