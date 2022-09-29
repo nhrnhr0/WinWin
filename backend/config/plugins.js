@@ -19,15 +19,16 @@ module.exports = {
               //  entry.lat;
               //  entry.lng;
             ret._geo = {
-              _lat: entry.lat,
-              _lng: entry.lng,
+              lat: entry.lat,
+              lng: entry.lng,
             }
             
             return ret;
         },
-        populateEntryRule: ['main_image.url','institutions', 'institutions.main_image.url', 'business_categories',],
+        populateEntryRule: ['header_image.url','favicon.url','institutions', 'institutions.header_image.url','institutions.favicon.url', 'business_categories','_geoDistance'],
          settings: {
-          filterableAttributes: ['business_categories','_geo'],
+          filterableAttributes: ['business_categories','_geo',],
+          sortableAttributes: ['_geo',]
          },
       },
       institution: {
@@ -40,16 +41,18 @@ module.exports = {
           }
           // transform the lat lng to _lat _lng
             ret._geo = {
-              _lat: entry.lat,
-              _lng: entry.lng,
+              lat: entry.lat,
+              lng: entry.lng,
             }
             return ret;
         },
-        populateEntryRule: ['main_image.url', 'businesses', 'businesses.main_image.url', 'institution_categories',],
+        populateEntryRule: ['header_image.url','favicon.url', 'businesses', 'businesses.header_image.url','businesses.favicon.url', 'institution_categories','_geoDistance'],
         settings: {
-          filterableAttributes: ['institution_categories','_geo'],
+          filterableAttributes: ['institution_categories','_geo',],
+          sortableAttributes: ['_geo',]
         },
       },
     },
   },
+
 }

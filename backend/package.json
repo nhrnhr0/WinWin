@@ -19,6 +19,7 @@
     "better-sqlite3": "7.4.6",
     "cross-env": "^7.0.3",
     "react-google-autocomplete": "^2.7.0",
+    "slugify": "^1.6.5",
     "strapi-plugin-meilisearch": "^0.7.1",
     "strapi-plugin-navigation": "^2.2.2"
   },

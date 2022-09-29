@@ -40,7 +40,7 @@
       "repeatable": false,
       "component": "attributes.contact-information"
     },
-    "main_image": {
+    "header_image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -83,6 +83,17 @@
       "relation": "manyToMany",
       "target": "api::business-category.business-category",
       "mappedBy": "businesses"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    },
+    "favicon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

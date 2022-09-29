@@ -37,7 +37,7 @@
       "repeatable": false,
       "component": "attributes.contact-information"
     },
-    "main_image": {
+    "header_image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -83,6 +83,21 @@
       "relation": "manyToMany",
       "target": "api::institution-category.institution-category",
       "inversedBy": "institutions"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "favicon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
