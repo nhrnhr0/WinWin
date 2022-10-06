@@ -84,20 +84,20 @@
       "target": "api::institution-category.institution-category",
       "inversedBy": "institutions"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name",
-      "required": true
-    },
     "favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }

@@ -36,6 +36,9 @@
     },
     "menu": {
       "type": "string"
+    },
+    "google_maps": {
+      "type": "string"
     }
   }
 }
