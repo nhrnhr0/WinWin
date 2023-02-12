@@ -1,0 +1,4 @@
+
+
+# running docker mellisearch
+docker run -it -d --rm -p 0.0.0.0:7700:7700 getmeili/meilisearch:latest meilisearch --master-key=masterKey
